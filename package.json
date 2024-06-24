@@ -1,6 +1,6 @@
 {
   "name": "postcss",
-  "version": "8.3.6",
+  "version": "8.3.6-sp1",
   "description": "Tool for transforming styles with JS plugins",
   "engines": {
     "node": "^10 || ^12 || >=14"
@@ -53,7 +53,7 @@
     "transpiler"
   ],
   "scripts": {
-    "test": "jest --coverage && eslint . && ./test/version.js && check-dts && ./test/integration.js && yaspeller *.md docs/{**/,}*.md && size-limit"
+    "test": "jest --coverage && eslint . && ./test/version.js && check-dts && ./test/integration.js && size-limit"
   },
   "funding": {
     "type": "opencollective",

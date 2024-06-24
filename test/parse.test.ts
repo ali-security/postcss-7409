@@ -32,6 +32,12 @@ it('should has false at `hasBOM` property', () => {
   expect(css.first?.source?.input.hasBOM).toBe(false)
 })
 
+it('parses carrier return', () => {
+  expect(() => {
+    parse('@font-face{ font:(\r/*);} body { a: "a*/)} a{}"}')
+  }).toThrow(/:1:46: Unclosed string/)
+})
+
 it('saves source file', () => {
   let css = parse('a {}', { from: 'a.css' })
   expect(css.first?.source?.input.css).toEqual('a {}')
